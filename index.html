@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // 获取浏览器语言
+    const lang = navigator.language || navigator.userLanguage;
+
+    // 中文跳转到 /No_Gitee/CN/
+    if (lang.startsWith('zh')) {
+      window.location.href = '/No_Gitee/CN/';
+    } else {
+      // 其他语言跳转到 /No_Gitee/EN/
+      window.location.href = '/No_Gitee/EN/';
+    }
+  </script>
+</head>
+
+<body>
+  <p>Redirecting... 如果没有自动跳转，请点击：
+    <a id="fallback-cn" href="/No_Gitee/CN/">中文页面</a> 或
+    <a id="fallback-en" href="/No_Gitee/EN/">English page</a>
+  </p>
+</body>
+
+</html>
